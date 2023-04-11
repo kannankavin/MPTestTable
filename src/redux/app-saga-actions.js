@@ -5,9 +5,9 @@ export const initSetEnv = ({ENV}) => ({
   payload: ENV,
 });
 
-export const initTableAdd = ({site, onSuccess}) => ({
-  type: 'APP_REDUCER/initTableAdd',
-  payload: {site, onSuccess},
+export const initTableUpdate = ({param, onSuccess}) => ({
+  type: 'APP_REDUCER/initTableUpdate',
+  payload: {param, onSuccess},
 });
 
 export const initTableGet = ({table_name,column_name,unique_column,onSuccess}) => ({

@@ -1,6 +1,5 @@
 import {call, put, takeEvery} from 'redux-saga/effects';
 import {setEnv} from 'src/redux/app-slice';
-import {setProfile} from 'src/redux/persist-slice';
 import APP_ACTION_TYPES from 'src/redux/app-saga-action-types';
 import Api from 'src/utils/service';
 import {API_URLS} from 'src/utils/constants';
@@ -14,7 +13,7 @@ export function* initTableUpdateWorker(action) {
   try {
     const response = yield call(Api, {
       url: API_URLS.TABLE_UPDATE,
-      params:action.payload.params,
+      params:action.payload.param,
     });
     action.payload.onSuccess(response);
   } catch (error) {

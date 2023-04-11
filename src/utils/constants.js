@@ -3,7 +3,7 @@ const API_BASE_URLS = {
 };
 
 const API_URLS = {
-  TABLE_ADD: {
+  TABLE_UPDATE: {
     URI: '/api/table/update',
     METHOD: 'POST',
     IS_SECURE: false,
